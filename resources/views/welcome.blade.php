@@ -12,7 +12,11 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-image: url("{{asset('images/main.jpg')}}");
+                -moz-background-size: 100% 100%;
+                -webkit-background-size: 100% 100%;
+                -o-background-size: 100% 100%;
+                background-size: 100% 100%;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -48,14 +52,15 @@
                 font-size: 84px;
             }
 
-            .links > a {
-                color: #636b6f;
+            .links > strong a {
+                color: white;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
                 letter-spacing: .1rem;
-                text-decoration: none;
                 text-transform: uppercase;
+                text-decoration: none;
+                cursor: pointer;
             }
 
             .m-b-md {
@@ -68,32 +73,32 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                    @if(Auth::user()->isDisabled())
+                        <strong><a href="{{url('/')}}">Home</a></strong>
+                    @elseif(Auth::user()->isUser())
+                        <strong><a href="{{url('/user/index')}}">User Account</a></strong>
+                    @elseif(Auth::user()->isGuest())
+                        <strong><a href="{{url('/')}}">Home</a></strong>
+                    @elseif(Auth::user()->isAdmin())
+                        <strong><a href="{{url('/admin/index')}}">Admin Account</a></strong>
+                        <strong><a href="{{url('/')}}">Home</a></strong>
+                    @endif
+                    <strong>
+                        <a class="dropdown-item" href="{{route('logout')}}"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit()"> Logout
+                        </a>
+                    </strong>
+                    <form id="logout-form" action="{{route('logout')}}" method="post" style="display: none">
+                        @csrf
+                    </form>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-
+                        <strong><a href="{{ route('login') }}">Login</a></strong>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                        <strong><a href="{{ route('register') }}">Register</a></strong>
                         @endif
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
         </div>
     </body>
 </html>
