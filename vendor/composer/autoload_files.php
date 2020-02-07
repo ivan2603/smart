@@ -21,4 +21,6 @@ return array(
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     '801c31d8ed748cfa537fa45402288c95' => $vendorDir . '/psy/psysh/src/functions.php',
     '0d8253363903f0ac7b0978dcde4e28a0' => $vendorDir . '/beyondcode/laravel-dump-server/helpers.php',
+    'cbaa33bf86c8990496d4cbd656909f60' => $baseDir . '/config/init.php',
+    '1923f06472a8b815d69c262803eb3c21' => $baseDir . '/config/params.php',
 );
