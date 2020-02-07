@@ -20,6 +20,9 @@ class RolesTableSeeder extends Seeder
 			[
 				'name' => 'admin',
 			],
+			[
+				'name' => 'guest',
+			],
 		];
 		DB::table('roles')->insert($data);
 	}
