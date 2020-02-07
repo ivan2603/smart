@@ -22,6 +22,8 @@ class ComposerStaticInit248b16eb8baf87a0e499e16212e0d4a6
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
+        'cbaa33bf86c8990496d4cbd656909f60' => __DIR__ . '/../..' . '/config/init.php',
+        '1923f06472a8b815d69c262803eb3c21' => __DIR__ . '/../..' . '/config/params.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -476,12 +478,12 @@ class ComposerStaticInit248b16eb8baf87a0e499e16212e0d4a6
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
-        'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'AttributeGroupsSeeder' => __DIR__ . '/../..' . '/database/seeds/AttributeGroupsSeeder.php',
         'AttributeProductsSeeder' => __DIR__ . '/../..' . '/database/seeds/AttributeProductsSeeder.php',
         'AttributeValuesSeeder' => __DIR__ . '/../..' . '/database/seeds/AttributeValuesSeeder.php',
@@ -4739,6 +4741,9 @@ class ComposerStaticInit248b16eb8baf87a0e499e16212e0d4a6
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'app\\SBlog\\Core\\BlogApp' => __DIR__ . '/../..' . '/app/SBlog/Core/BlogApp.php',
+        'app\\SBlog\\Core\\Registry' => __DIR__ . '/../..' . '/app/SBlog/Core/Registry.php',
+        'app\\SBlog\\Core\\TSingleton' => __DIR__ . '/../..' . '/app/SBlog/Core/TSingleton.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',
