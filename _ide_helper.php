@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.36 on 2020-02-06 16:26:39.
+ * Generated for Laravel 5.8.36 on 2020-02-11 11:52:56.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1808,7 +1808,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get the currently authenticated user.
          *
-         * @return \App\User|null 
+         * @return \App\Models\User|null 
          * @static 
          */ 
         public static function user()
@@ -1846,7 +1846,7 @@ namespace Illuminate\Support\Facades {
          * Log the given user ID into the application without sessions or cookies.
          *
          * @param mixed $id
-         * @return \App\User|false 
+         * @return \App\Models\User|false 
          * @static 
          */ 
         public static function onceUsingId($id)
@@ -1915,7 +1915,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param mixed $id
          * @param bool $remember
-         * @return \App\User|false 
+         * @return \App\Models\User|false 
          * @static 
          */ 
         public static function loginUsingId($id, $remember = false)
@@ -1982,7 +1982,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get the last user we attempted to authenticate.
          *
-         * @return \App\User 
+         * @return \App\Models\User 
          * @static 
          */ 
         public static function getLastAttempted()
@@ -2093,7 +2093,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Return the currently cached user.
          *
-         * @return \App\User|null 
+         * @return \App\Models\User|null 
          * @static 
          */ 
         public static function getUser()
@@ -2143,7 +2143,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Determine if current user is authenticated. If not, throw an exception.
          *
-         * @return \App\User 
+         * @return \App\Models\User 
          * @throws \Illuminate\Auth\AuthenticationException
          * @static 
          */ 
@@ -14599,6 +14599,178 @@ namespace Illuminate\Support {
  
 }
 
+namespace Fomvasss\LaravelMetaTags { 
+
+    /**
+     * 
+     *
+     */ 
+    class Facade {
+        
+        /**
+         * 
+         *
+         * @return mixed 
+         * @static 
+         */ 
+        public static function render()
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->render();
+        }
+        
+        /**
+         * 
+         *
+         * @param string $template
+         * @return \Fomvasss\LaravelMetaTags\Builder 
+         * @static 
+         */ 
+        public static function setTemplate($template)
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->setTemplate($template);
+        }
+        
+        /**
+         * 
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getTemplate()
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->getTemplate();
+        }
+        
+        /**
+         * 
+         *
+         * @param \Fomvasss\LaravelMetaTags\Model $entityModel
+         * @return \Fomvasss\LaravelMetaTags\Builder 
+         * @static 
+         */ 
+        public static function setEntity($entityModel)
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->setEntity($entityModel);
+        }
+        
+        /**
+         * Set current path.
+         *
+         * @param string $path
+         * @return \Fomvasss\LaravelMetaTags\Builder 
+         * @static 
+         */ 
+        public static function setPath($path = null)
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->setPath($path);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getPath()
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->getPath();
+        }
+        
+        /**
+         * 
+         *
+         * @param array $tags
+         * @return \Fomvasss\LaravelMetaTags\Builder 
+         * @static 
+         */ 
+        public static function setTags($tags = [])
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->setTags($tags);
+        }
+        
+        /**
+         * 
+         *
+         * @param array $defaultTags
+         * @static 
+         */ 
+        public static function setDefault($defaultTags = [])
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->setDefault($defaultTags);
+        }
+        
+        /**
+         * 
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function get()
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->get();
+        }
+        
+        /**
+         * 
+         *
+         * @param string $tag
+         * @return string 
+         * @static 
+         */ 
+        public static function tag($tag)
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->tag($tag);
+        }
+        
+        /**
+         * 
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getForEntity()
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->getForEntity();
+        }
+        
+        /**
+         * 
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getForPath()
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->getForPath();
+        }
+        
+        /**
+         * 
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getResult()
+        {
+                        /** @var \Fomvasss\LaravelMetaTags\Builder $instance */
+                        return $instance->getResult();
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17392,6 +17564,8 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class MetaTag extends \Fomvasss\LaravelMetaTags\Facade {}
  
 }
 
