@@ -26,7 +26,9 @@ Route::group(['middleware' => ['status', 'auth']], function () {
 		'prefix'    => 'admin'
 	];
 	Route::group($group, function () {
-		Route::resource('index', 'MainController')->names('blog.admin.main.index');
+		Route::resource('index', 'MainController')->names('blog.admin.main');
+		Route::resource('orders', 'OrderController')->names('blog.admin.orders');
+		Route::get('/orders/change/{id}', 'OrderController@change')->name('blog.admin.orders.change');
 	});
 
 });
