@@ -37,7 +37,7 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="{{route('blog.admin.main.index.index')}}" class="logo">
+        <a href="{{route('blog.admin.main.index')}}" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
@@ -110,8 +110,8 @@
                 <li class="header">Menu</li>
                 <!-- Optionally, you can add icons to the links -->
                 <li><a href="/"><i class="fa fa-home"></i> <span>Shop</span></a></li>
-                <li><a href=""><i class="fa fa-user"></i> <span>Dashboard</span></a></li>
-                <li><a href=""><i class="fa fa-shopping-cart"></i> <span>Orders</span></a></li>
+                <li><a href="{{route('blog.admin.main.index')}}"><i class="fa fa-user"></i> <span>Dashboard</span></a></li>
+                <li><a href="{{route('blog.admin.orders.index')}}"><i class="fa fa-shopping-cart"></i> <span>Orders</span></a></li>
 
 
 
@@ -195,7 +195,7 @@
     <div class="content-wrapper">
 
         <main id="app">
-            {{--@include('blog.admin.components.result_messages')--}}
+            @include('blog.admin.components.messages')
             @yield('content')
         </main>
     </div>
@@ -229,6 +229,8 @@
 
 <!-- AdminLTE App -->
 <script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
+
+<script src="{{asset('js/my.js')}}"></script>
 
 <!-- === = ===  -->
 
