@@ -23,16 +23,16 @@
                         <td><a href=""></a>{{$order->id}}</td>
                         <td><a href=""></a>{{ucfirst($order->name)}}</td>
                         <td><span class="label label-success">
-                                @if($order->status == 0) New
+                                @if($order->status == 0) Processed
                                 @endif
                                 @if($order->status == 1) Completed
                                     @endif
-                                @if($order->status == 2) <b>Deleted</b>
+                                @if($order->status == 2) <b>Moved to archive</b>
                                     @endif
                             </span>
                         </td>
                         <td>
-                            <div class="sparkbar" data-color="#00a65a" data-height="20">{{$order->sum}}</div>
+                            <div class="sparkbar" data-color="#00a65a" data-height="20">{{$order->sum}} {{$order->currency}}</div>
                         </td>
                     </tr>
                 @endforeach
@@ -42,7 +42,7 @@
     </div>
     <br>
     <div class="box-footer clarfix">
-        <a href="" class="btn btn-sm btn-info btn-flat pull-left">All orders</a>
+        <a href="{{route('blog.admin.orders.index')}}" class="btn btn-sm btn-info btn-flat pull-left">All orders</a>
     </div>
 </div>
 </div>
