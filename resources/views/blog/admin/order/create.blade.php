@@ -9,4 +9,7 @@
         @slot('active') Create order @endslot
         @endcomponent
     </section>
+    <section class="content">
+
+    </section>
 @endsection

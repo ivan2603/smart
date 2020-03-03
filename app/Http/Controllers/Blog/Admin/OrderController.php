@@ -7,10 +7,20 @@ use App\Repositories\Admin\MainRepository;
 use App\Repositories\Admin\OrderRepository;
 use Illuminate\Http\Request;
 
+/**
+ * Class OrderController
+ * @package App\Http\Controllers\Blog\Admin
+ */
 class OrderController extends AdminBaseController
 {
+	/**
+	 * @var OrderRepository|\Illuminate\Contracts\Foundation\Application|mixed
+	 */
 	private $orderRepository;
 
+	/**
+	 * OrderController constructor.
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -27,7 +37,7 @@ class OrderController extends AdminBaseController
         $pagination = 10;
 	    $countOrders = MainRepository::getCountOrders();
 	    $orders = $this->orderRepository->getLastOrders($pagination);
-	    \MetaTag::setTags(['title' => 'Orders list']);
+	    \MetaTag::setTags(['title' => 'Order list']);
 		return view('blog.admin.order.index', compact('countOrders', 'orders', 'pagination'));
     }
 
@@ -70,12 +80,20 @@ class OrderController extends AdminBaseController
 	    return view('blog.admin.order.refund', compact('orderProductsRefund', 'order', 'id'));
     }
 
-    protected function restore($id) {
+	/**
+	 * @param $id
+	 */
+	protected function restore($id) {
 
 	    $this->orderRepository->restoreOrder($id);
     }
 
-    private function checkOrderStatus($id) {
+	/**
+	 * @param $id
+	 *
+	 * @return mixed
+	 */
+	private function checkOrderStatus($id) {
 
 	    return $this->orderRepository->checkStatus($id);
     }
@@ -109,7 +127,12 @@ class OrderController extends AdminBaseController
 		return view('blog.admin.order.edit', compact('item', 'order', 'orderProducts'));
     }
 
-    public function change($id) {
+	/**
+	 * @param $id
+	 *
+	 * @return \Illuminate\Http\RedirectResponse
+	 */
+	public function change($id) {
 
 	    $result = $this->orderRepository->changeStatus($id);
 

@@ -11,6 +11,10 @@ namespace App\Repositories;
  * Class CoreRepository
  * @package app\Repositories
  */
+/**
+ * Class CoreRepository
+ * @package App\Repositories
+ */
 abstract class CoreRepository
 {
 	/**
@@ -50,6 +54,13 @@ abstract class CoreRepository
 		return $this->startConditions()->find($id);
 	}
 
+
+	/**
+	 * @param bool   $get
+	 * @param string $id
+	 *
+	 * @throws \Exception
+	 */
 	public function getRequestId($get = true, $id = 'id')
 	{
 		if ($get) {
@@ -62,6 +73,7 @@ abstract class CoreRepository
 		if (!$id) {
 			throw new \Exception('Check id', 404);
 		}
+		return $id;
 	}
 
 }
