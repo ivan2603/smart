@@ -456,6 +456,13 @@ class ComposerStaticInit248b16eb8baf87a0e499e16212e0d4a6
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
             ),
         ),
+        'L' => 
+        array (
+            'Lavary\\Menu\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/lavary/laravel-menu/src',
+            ),
+        ),
         'B' => 
         array (
             'Barryvdh' => 
@@ -475,7 +482,9 @@ class ComposerStaticInit248b16eb8baf87a0e499e16212e0d4a6
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Blog\\Admin\\AdminBaseController' => __DIR__ . '/../..' . '/app/Http/Controllers/Blog/Admin/AdminBaseController.php',
+        'App\\Http\\Controllers\\Blog\\Admin\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Blog/Admin/CategoryController.php',
         'App\\Http\\Controllers\\Blog\\Admin\\MainController' => __DIR__ . '/../..' . '/app/Http/Controllers/Blog/Admin/MainController.php',
+        'App\\Http\\Controllers\\Blog\\Admin\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Blog/Admin/OrderController.php',
         'App\\Http\\Controllers\\Blog\\BaseController' => __DIR__ . '/../..' . '/app/Http/Controllers/Blog/BaseController.php',
         'App\\Http\\Controllers\\Blog\\User\\MainController' => __DIR__ . '/../..' . '/app/Http/Controllers/Blog/User/MainController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -489,6 +498,9 @@ class ComposerStaticInit248b16eb8baf87a0e499e16212e0d4a6
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Admin\\Category' => __DIR__ . '/../..' . '/app/Models/Admin/Category.php',
+        'App\\Models\\Admin\\Order' => __DIR__ . '/../..' . '/app/Models/Admin/Order.php',
+        'App\\Models\\Admin\\Product' => __DIR__ . '/../..' . '/app/Models/Admin/Product.php',
         'App\\Models\\Admin\\User' => __DIR__ . '/../..' . '/app/Models/Admin/User.php',
         'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
@@ -498,6 +510,11 @@ class ComposerStaticInit248b16eb8baf87a0e499e16212e0d4a6
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Repositories\\Admin\\CategoryRepository' => __DIR__ . '/../..' . '/app/Repositories/Admin/CategoryRepository.php',
+        'App\\Repositories\\Admin\\MainRepository' => __DIR__ . '/../..' . '/app/Repositories/Admin/MainRepository.php',
+        'App\\Repositories\\Admin\\OrderRepository' => __DIR__ . '/../..' . '/app/Repositories/Admin/OrderRepository.php',
+        'App\\Repositories\\Admin\\ProductRepository' => __DIR__ . '/../..' . '/app/Repositories/Admin/ProductRepository.php',
+        'App\\Repositories\\CoreRepository' => __DIR__ . '/../..' . '/app/Repositories/CoreRepository.php',
         'AttributeGroupsSeeder' => __DIR__ . '/../..' . '/database/seeds/AttributeGroupsSeeder.php',
         'AttributeProductsSeeder' => __DIR__ . '/../..' . '/database/seeds/AttributeProductsSeeder.php',
         'AttributeValuesSeeder' => __DIR__ . '/../..' . '/database/seeds/AttributeValuesSeeder.php',
@@ -2662,6 +2679,13 @@ class ComposerStaticInit248b16eb8baf87a0e499e16212e0d4a6
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'Lavary\\Menu\\Builder' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Builder.php',
+        'Lavary\\Menu\\Collection' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Collection.php',
+        'Lavary\\Menu\\Facade' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Facade.php',
+        'Lavary\\Menu\\Item' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Item.php',
+        'Lavary\\Menu\\Link' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Link.php',
+        'Lavary\\Menu\\Menu' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Menu.php',
+        'Lavary\\Menu\\ServiceProvider' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/ServiceProvider.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',

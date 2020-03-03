@@ -29,6 +29,8 @@ Route::group(['middleware' => ['status', 'auth']], function () {
 		Route::resource('index', 'MainController')->names('blog.admin.main');
 		Route::resource('orders', 'OrderController')->names('blog.admin.orders');
 		Route::get('/orders/change/{id}', 'OrderController@change')->name('blog.admin.orders.change');
+		Route::resource('categories', 'CategoryController')->names('blog.admin.categories');
+		Route::get('/categories/delete/{id}', 'CategoryController@delete')->name('blog.admin.categories.delete');
 	});
 
 });
